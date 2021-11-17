@@ -28,13 +28,7 @@ int main()
 
     count = ft_lstsize(head);
     printf("Count = %d\n",count);
-    t_list *tmp = head;
-    while (tmp)
-    {
-        int *num = (int *)tmp -> content;
-        printf("%d ", *num);
-        tmp = tmp -> next;
-    }
+    print_list(head);
     printf("\n");
     last = ft_lstlast(head);
     printf("Last Element : %d\n",*((int *)last ->content));
