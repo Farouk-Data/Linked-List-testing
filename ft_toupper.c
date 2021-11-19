@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fech-cha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 21:29:35 by fech-cha          #+#    #+#             */
-/*   Updated: 2021/11/12 22:37:31 by fech-cha         ###   ########.fr       */
+/*   Created: 2021/11/08 10:18:13 by fech-cha          #+#    #+#             */
+/*   Updated: 2021/11/14 13:02:56 by fech-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Create a new element of the list */
-t_list	*ft_lstnew(void *content)
+int	ft_toupper(int c)
 {
-	t_list	*tmp;
-
-	tmp = (t_list *)malloc(sizeof(t_list));
-	if (tmp == NULL)
-		return (NULL);
-	else
-	{
-		tmp -> content = content;
-		tmp -> next = NULL;
-	//(*tmp).content = content
-	}
-	return (tmp);
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
 }

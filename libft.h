@@ -27,4 +27,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	print_list(t_list *head);
 int		ft_lstsize(t_list *lst);
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+int		ft_toupper(int ch);
 #endif

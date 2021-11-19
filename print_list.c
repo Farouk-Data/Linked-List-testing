@@ -8,10 +8,11 @@ void print_list(t_list *head)
     
     while (tmp)
     {
-        int *num = (int *)tmp -> content;
-        printf("%d ",*num);
+        // int *num = (int *)tmp -> content;
+        char *num = (char *)tmp->content;
+        printf("%s ",num);
         if (tmp -> next != NULL)
-            printf("->");
+            printf("-> ");
         tmp = tmp -> next;
     }
 }
