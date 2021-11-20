@@ -19,7 +19,8 @@ t_list  *ft_lstmap(t_list *lst , void *(*f)(void *))
     new_head = (t_list *)malloc(sizeof(t_list));
     /*if (!new_head)
         ft_lst*/
-    new_head -> content = (*f)(lst -> content);
+    new_head -> content = (f)(lst -> content);
+    printf("%s \n",(char *)lst -> content);
     new_head -> next = ft_lstmap(lst -> next,(*f));
 
     return (new_head);
