@@ -1,11 +1,12 @@
 #include "libft.h"
 
-void    change(void *a)
+void    *change(void *a)
 {
     char *b = (char *)a;
     int i = -1;
     while (b[++i])
         b[i] = ft_toupper(b[i]);
+    return ((char *)b);
 }
 
 int main()
@@ -14,6 +15,7 @@ int main()
     t_list *head;
     t_list *last;
     t_list *a ,*b ,*c,*d;
+    t_list  *new_list;
 
     // int int1 = 1;
     // int int2 = 2;
@@ -41,12 +43,15 @@ int main()
     printf("Count = %d\n",count);
     print_list(head);
 
-    ft_lstiter(head,&change);
-    printf("\n");
+    //ft_lstiter(head,&change);
+    //printf("\n");
     last = ft_lstlast(head);
-    print_list(head);
+    //print_list(head);
     printf("\n");
     printf("Last Element : %s\n",((char *)last ->content));
+    printf("Copy of the list : \n");
+    new_list = ft_lstmap(head,&change);
+    print_list(new_list);
     return 0;
 
 }
